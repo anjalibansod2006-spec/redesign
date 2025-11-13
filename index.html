@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ecothread — Sustainable fashion & fabrics</title>
+  <meta name="description" content="Ecothread — sustainable, ethically made fabrics and clothing." />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body >
+  <header class="site-header" >
+    <div class="container header-inner">
+      <a class="brand" href="#">Ecothread</a>
+
+      <nav class="nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="cart-btn" aria-label="View cart">Cart (<span id="cart-count">0</span>)</button>
+        <button id="menu-btn" aria-label="Toggle menu" class="menu-btn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero fade-in hero-bg">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Eco-friendly fabrics. Timeless design.</h1>
+          <p>Organic cotton, recycled fibers, and low-impact dyes — thoughtfully made garments that last.</p>
+          <p><a class="btn" href="#products">Shop sustainable</a></p>
+        </div>
+        <div class="hero-media" aria-label="Hero video showcasing sustainable fabrics">
+          <video class="hero-video" autoplay muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1506629905607-0b3b5b4b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80">
+            <source src="https://player.vimeo.com/external/370734877.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6d7de7c4a5&profile_id=165" type="video/mp4">
+            
+            <img src="https://images.unsplash.com/photo-1506629905607-0b3b5b4b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sustainable fabric swatch" class="hero-img">
+          </video>
+          <div class="hero-overlay"></div> 
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section container fade-in section-bg-light">
+      <div class="section-head">
+        <h2>Featured Products</h2>
+        <div class="filters">
+          <label for="filter-select">Filter:</label>
+          <select id="filter-select" aria-label="Filter products">
+            <option value="all">All</option>
+            <option value="tops">Tops</option>
+            <option value="pants">Pants</option>
+            <option value="home">Home</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="product-grid" class="product-grid" aria-live="polite">
+      
+      </div>
+    </section>
+
+    <section id="about" class="section alt fade-in section-bg-alt">
+      <div class="container">
+        <h2>About Ecothread</h2>
+        <p>We partner with small suppliers who use regenerative farming and low-water dyeing processes. Our packaging is compostable, and we offset shipping emissions.</p>
+        <ul class="about-list">
+          <li>Organic & GOTS certified cotton</li>
+          <li>Low-impact dyes</li>
+          <li>Fair wages & transparent supply chain</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section id="blog" class="section container fade-in section-bg-light">
+      <h2>From the Journal</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Natural fibers care guide" class="card-img">
+          <h3>How to care for natural fibers</h3>
+          <p>Simple steps to make your clothes last longer and reduce waste.</p>
+          <a href="#" class="link">Read</a>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Low-impact dyes explanation" class="card-img">
+          <h3>Why low-impact dyes matter</h3>
+          <p>An explainer on chemicals, water usage and better alternatives.</p>
+          <a href="#" class="link">Read</a>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Artisan family mill" class="card-img">
+          <h3>Spotlight: a small family mill</h3>
+          <p>Meet the artisans behind our hand-loomed scarves.</p>
+          <a href="#" class="link">Read</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt container fade-in section-bg-alt">
+      <h2>Get in touch</h2>
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="row">
+          <label>
+            Name
+            <input type="text" name="name" id="name" required minlength="2" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" id="email" required />
+          </label>
+        </div>
+        <label>
+          Message
+          <textarea name="message" id="message" rows="5" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn" id="submit-btn">Send message</button>
+          <button type="reset" class="btn btn-ghost">Reset</button>
+        </div>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Ecothread</strong>
+        <p>Made with care • Minimal waste • Fair trade</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#products">Shop</a></li>
+          <li><a href="#about">Our story</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="copyright">© <span id="year"></span> Ecothread — All rights reserved.</p>
+  </footer>
+  
+  <script src="project.js" defer></script>
+</body>
+</html>
